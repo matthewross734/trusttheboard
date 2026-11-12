@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Trust The Board — CFB Picks, 51+ Probability & Playoff Picture</title>
+<title>Trust The Board — CFB Picks, 51+ Probability & Projected Playoff</title>
 <meta name="description" content="Trust The Board: college football bet tracking, model picks, 51+ scoring probabilities and a projected 12-team playoff.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231f4630'/%3E%3Ctext x='32' y='41' font-family='Arial' font-weight='700' font-size='24' fill='%23f4f3ef' text-anchor='middle'%3ETTB%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231F3BFF'/%3E%3Ctext x='32' y='41' font-family='Arial' font-weight='700' font-size='24' fill='%23ffffff' text-anchor='middle'%3ETTB%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f4f3ef;--band:#e9e7e0;--card:#fbfaf6;--ink:#191a17;--mute:#676960;--line:#cccec6;--soft:#e3e2db;--green:#1f4630;--green-soft:#e4ece4;--gold:#a8741a;
+:root{--bg:#f4f3ef;--band:#e9e7e0;--card:#fbfaf6;--ink:#191a17;--mute:#555B66;--line:#cccec6;--soft:#E3E6EB;--green:#1F3BFF;--green-soft:#e4ece4;--gold:#a8741a;
 --sans:"Geist",Arial,sans-serif;--mono:"Geist Mono",ui-monospace,Menlo,monospace}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;-webkit-font-smoothing:antialiased}
@@ -41,7 +41,7 @@ table.rank{width:100%;border-collapse:collapse;font-size:14px;min-width:880px}
 .bars span{font:10px var(--mono);color:var(--mute);margin-left:6px;white-space:nowrap}.bars .r{display:flex;align-items:center}.bars .r+.r{margin-top:3px}
 .legend{display:flex;gap:18px;font-size:12px;color:var(--mute);margin-top:14px}.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
 .note{font-size:12.5px;line-height:1.55;color:var(--mute);margin:14px 0 0}.note.wide{max-width:90ch;margin-top:20px}
-:root{--line2:#a9ab9f}
+:root{--line2:#9AA1AD}
 .three{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .three .panel .num{font:500 11px var(--mono);color:var(--green);letter-spacing:.1em}
 .three h3{font-size:17px;margin:8px 0 4px;letter-spacing:-.01em}.three .cut{font:600 22px var(--mono);letter-spacing:-.03em;margin:10px 0}
@@ -81,13 +81,16 @@ tr.clk{cursor:pointer}tr.clk:hover td,tr.clk:focus td{background:#f1efe8}tr.clk:
 .ct{width:100%;border-collapse:collapse;font-size:13.5px}.ct td,.ct th{padding:9px 12px;border-bottom:1px solid var(--soft);text-align:center}.ct th{font:500 10px var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--mute)}.ct td:nth-child(2){color:var(--mute);font-size:12px;width:30%}.ct tr:last-child td{border-bottom:0}.ct .win{font-weight:650;color:var(--green)}.ct td b{font-family:var(--mono)}
 button.bid{cursor:pointer;background:var(--card);font-family:var(--mono)}button.bid.on{background:var(--green);color:#fff;border-color:var(--green)}
 @media(max-width:760px){.cv2{grid-template-columns:1fr}}
-.setbar{display:flex;flex-wrap:wrap;gap:12px 26px;align-items:center;padding:14px 18px;margin-bottom:18px;font-size:13.5px;color:var(--mute)}
+.setbar{display:flex;flex-direction:column;gap:16px;align-items:flex-start;padding:14px 18px;margin-bottom:18px;font-size:13.5px;color:var(--mute)}
 .setbar .sbt{font:500 10px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--green)}.setbar label{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.setbar .sel{margin:0}
 .setbar .sbb{margin-left:auto;display:flex;gap:8px}.pct{display:inline-flex;align-items:center;gap:4px;color:var(--ink);font-family:var(--mono)}
 .pct input{width:66px;border:1px solid var(--line);background:var(--bg);border-radius:8px;padding:7px 8px;font:600 14px var(--mono);color:var(--ink);text-align:right}
 .subtabs{display:flex;gap:22px;border-bottom:1px solid var(--line);margin-bottom:30px;overflow-x:auto;white-space:nowrap}.subtabs .tab small{margin:0 4px 0 0;border:1px solid currentColor;border-radius:50%;width:16px;height:16px;display:inline-grid;place-items:center;font-size:9px}
 .nx{margin-top:22px;text-align:right}
 @media(max-width:760px){.setbar .sbb{margin-left:0}}
+.abs{display:flex;flex-wrap:wrap;gap:8px 18px}.abs label{gap:6px;color:var(--ink);font-size:13.5px;cursor:pointer}.abs input{accent-color:var(--green);width:15px;height:15px}
+.rounds.r5{grid-template-columns:repeat(5,1fr)}@media(max-width:1100px){.rounds.r5{grid-template-columns:repeat(3,1fr)}}@media(max-width:760px){.rounds.r5{grid-template-columns:1fr 1fr}}@media(max-width:560px){.rounds.r5{grid-template-columns:1fr}}
+.rgg{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}.rgg .gm{margin:0}.gm.chg{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold)}.day+.rgg{margin-bottom:6px}
 .ccg{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
 .cg{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}.cg.chg{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold)}
 .cg .hd{display:flex;justify-content:space-between;padding:10px 14px;border-bottom:1px solid var(--soft);font-weight:600;font-size:14px}.cg .hd small{font:10px var(--mono);color:var(--mute);font-weight:400;text-transform:uppercase;letter-spacing:.06em}
@@ -110,8 +113,8 @@ button.sd{width:100%;border:0;background:none;font-family:var(--sans);text-align
 .bid{font:500 10px var(--mono);padding:3px 7px;border-radius:20px;border:1px solid var(--line);color:var(--mute);white-space:nowrap}.bid.aq{border-color:var(--green);color:var(--green);background:var(--green-soft)}
 @media(max-width:760px){.tiles{grid-template-columns:1fr 1fr}.dr-p{padding:16px 14px 50px}.pod{grid-template-columns:1fr;gap:6px}.pod .arrow{transform:rotate(90deg)}}
 table.rank.sm{min-width:0;font-size:13.5px}.rank.sm td,.rank.sm th{padding:9px 12px}
-.pos{color:var(--green);font-weight:600}.neg{color:#a03224;font-weight:600}
-.res{font:600 10px var(--mono);padding:3px 7px;border-radius:4px}.res.W{background:var(--green-soft);color:var(--green)}.res.L{background:#f3e3df;color:#a03224}.res.P{background:var(--soft);color:var(--mute)}
+.pos{color:var(--green);font-weight:600}.neg{color:#C22A1C;font-weight:600}
+.res{font:600 10px var(--mono);padding:3px 7px;border-radius:4px}.res.W{background:var(--green-soft);color:var(--green)}.res.L{background:#f3e3df;color:#C22A1C}.res.P{background:var(--soft);color:var(--mute)}
 .dv{display:flex;align-items:center;height:10px;width:110px}.dv div{flex:1;height:100%;display:flex}.dv .l{justify-content:flex-end;border-right:1px solid var(--line2)}.dv i{display:block;height:100%;border-radius:2px}
 select.sel{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:8px 10px;font:14px var(--sans);color:var(--ink);margin-bottom:10px}
 #bchart svg{width:100%;height:auto;display:block}
@@ -171,11 +174,57 @@ h2{font-size:36px;letter-spacing:-.035em;font-weight:560;margin:0}
 .empty{padding:60px 0;text-align:center;color:var(--mute)}
 footer{border-top:1px solid var(--line);padding:26px 0 50px;font-size:12.5px;line-height:1.6;color:var(--mute)}
 @media(max-width:760px){.shell{padding:0 16px}.hero,.bhead{grid-template-columns:1fr;gap:18px}.hero{padding:34px 0 26px}.stats{grid-template-columns:1fr 1fr}.stat{padding:14px}.stat:nth-child(odd){border-left:0;padding-left:0}.stat:nth-child(n+3){border-top:1px solid var(--line)}.controls input{margin-left:0;width:100%;margin-bottom:10px}.grid{grid-template-columns:1fr}.two,.two.even,.three{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr;row-gap:16px}.flow div:nth-child(odd){border-left:0;padding-left:0}.nav{gap:14px}.crumb{display:none}}
+
+/* ---- betting-slip theme ---- */
+.chip{position:relative;overflow:hidden}.chip img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#fff}.chip.haslogo{background:#fff!important;color:transparent;border-radius:6px}
+:root{--bg:#fff;--band:#fff;--card:#F4F5F7;--ink:#0B0D12;--mute:#555B66;--line:#D9DCE2;--soft:#E3E6EB;--green:#1F3BFF;--green-soft:#E8EBFF;--gold:#B45309;--line2:#9AA1AD;--up:#0A7A3E;--dn:#C22A1C;--sans:"Inter",Arial,sans-serif;--mono:"Inter",Arial,sans-serif;--head:"Archivo","Inter",Arial,sans-serif}
+body{font-feature-settings:"tnum"}
+h1,h2,h1 span{font-family:var(--head);font-weight:900;letter-spacing:-.04em}h1 span{color:var(--green)}h2{font-size:30px}h1{font-size:clamp(44px,7vw,72px)}
+.top{background:var(--green);border-bottom:0;backdrop-filter:none;position:static}.top .shell{height:56px}
+.word{font-family:var(--head);font-weight:900;font-size:22px;letter-spacing:-.03em;color:#fff}.top .tagl{margin-left:auto;font-size:13px;font-weight:600;color:#fff}
+.navbar{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:5}.navbar .nav{margin-left:0;gap:26px}.nav a{padding:13px 0;border-bottom-width:3px;font-weight:500}.nav a.on{font-weight:700;border-color:var(--green)}
+.hero{padding:40px 0 28px}.eyebrow{font-weight:700;letter-spacing:.1em}
+.stats{border:0;gap:14px}.stat,.stat:first-child{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}.stat .k{font-weight:600}.stat .v{font:800 34px var(--head);letter-spacing:-.03em}
+.board{background:none;margin-top:28px;padding:36px 0 72px;border-top:1px solid var(--line)}
+.day{background:var(--ink);color:#fff;border-radius:10px}
+.tw,.panel,.card,.cg,.half,.tile,.vs,.verd{border-radius:14px}.gm,.slot{border-radius:12px}.tw{background:#fff}
+.rank th{background:var(--ink);color:#fff;font-weight:600}.rank th.pp{background:var(--green);color:#fff}.rank td.pp{color:var(--ink)}
+.tab{font-weight:500}.tab[aria-pressed=true]{font-weight:700;border-color:var(--green)}
+.pos{color:var(--up)}.neg{color:var(--dn)}.res.W{background:#DDF3E6;color:var(--up)}.res.L{background:#FBE3DF;color:var(--dn)}.odds{color:var(--up)}
+tr.clk:hover td,tr.clk:focus td,.pk:hover,.sd:hover{background:#ECEEF2}tr.clk:hover td.pp,tr.clk:focus td.pp{background:#D5DAFF}.dt tr.tot td,.vs .hd{background:#E9EBEF}.gm .ln{background:#ECEEF2}.panel.warn{background:#FFF7E6}
+.btn{border-radius:999px;font-weight:600;background:#fff}.sel,.controls input,.pct input{border-radius:10px;background:#fff}
+.pts,.tile .v,.cut,.flow .v{font-family:var(--head)}.pts{font-weight:800}
+.pill{display:inline-block;background:var(--green);color:#fff;font-weight:700;font-size:12.5px;padding:4px 10px;border-radius:999px;white-space:nowrap;margin:2px 6px 2px 0}.pill small{font-weight:500;opacity:.85;margin-left:6px}
+.tclk.inl{display:inline;padding:0;font-weight:700}.tclk.inl:hover,.tclk.inl:focus{text-decoration:underline}
+.lnk{font-size:14px;font-weight:700;color:var(--ink);text-decoration:none;white-space:nowrap}.lnk:hover{color:var(--green)}
+.hrow{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:14px}.hrow h2{font-size:24px}
+.seedb{width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;font:800 15px var(--head);display:grid;place-items:center;flex:none}
+.frow{display:flex;align-items:center;gap:14px;padding:11px 0;border-top:1px solid var(--line);cursor:pointer}.frow:hover b{text-decoration:underline}.frow small{display:block;color:var(--mute);font-size:13px}.frow span{margin-left:auto;color:var(--mute);font-weight:600;font-size:15px}
+@media(max-width:760px){.stat,.stat:first-child,.stat:nth-child(odd),.stat:nth-child(n+3){border:1px solid var(--line);padding:14px}.word{font-size:19px}.top .tagl{display:none}}
 </style>
 </head>
 <body>
-<div class="top"><div class="shell"><div class="mark">TTB</div><div class="crumb"><b>The Board</b> / 2026 CFB</div><nav class="nav"><a href="#the-board" data-r="the-board">The Board</a><a href="#model-picks" data-r="model-picks">Model Picks</a><a href="#fifty-one" data-r="fifty-one">51+ Probability</a><a href="#games-to-watch" data-r="games-to-watch">Games to Watch</a><a href="#playoff-picture" data-r="playoff-picture">Playoff Picture</a></nav></div></div>
-<main id="v-model-picks">
+<div class="top"><div class="shell"><div class="word">Trust The Board</div><div class="tagl">2026 college football</div></div></div>
+<div class="navbar"><div class="shell"><nav class="nav"><a href="#home" data-r="home">Home</a><a href="#the-board" data-r="the-board">The Board</a><a href="#model-picks" data-r="model-picks">Model Picks</a><a href="#fifty-one" data-r="fifty-one">51+ Probability</a><a href="#games-to-watch" data-r="games-to-watch">Games to Watch</a><a href="#projected-playoff" data-r="projected-playoff">Projected Playoff</a></nav></div></div>
+<main id="v-home">
+<div class="shell">
+  <section class="hero">
+    <div><div class="eyebrow">2026 college football</div><h1>Week <span>11</span></h1></div>
+    <div><p class="lede" style="max-width:38ch">Model projections, 51+ scoring chances and the projected playoff, with every bet on The Board graded.</p>
+      <div class="stamp">November 10–14<br>Lines and ratings as of Nov 9, 2026</div></div>
+  </section>
+  <section class="stats" id="hstats"></section>
+</div>
+<section class="board"><div class="shell">
+  <div class="two even">
+    <div class="panel"><div class="hrow"><h2>Top 51+ plays this week</h2><a class="lnk" href="#fifty-one" data-r="fifty-one">All teams →</a></div><div class="dtw"><table class="dt" id="hplays" style="background:none;border:0"></table></div></div>
+    <div class="panel"><div class="hrow"><h2>Projected playoff</h2><a class="lnk" href="#projected-playoff" data-r="projected-playoff">Full field →</a></div><div id="hfield"></div></div>
+  </div>
+  <div class="hrow" style="margin-top:40px"><h2>Biggest edges this week</h2><a class="lnk" href="#model-picks" data-r="model-picks">All 67 games →</a></div>
+  <div class="tw"><table class="rank sm" id="hgames" style="min-width:860px"></table></div>
+</div></section>
+</main>
+<main id="v-model-picks" hidden>
 <div class="shell">
   <section class="hero">
     <div><div class="eyebrow">2026 College Football</div><h1>Week <span>11</span><br>Model Picks.</h1></div>
@@ -273,31 +322,23 @@ footer{border-top:1px solid var(--line);padding:26px 0 50px;font-size:12.5px;lin
   <p class="note wide">Projections use ratings as of the Nov 9 workbook and will move as more games are played, so games can enter or leave this list. Vegas lines for these weeks are not in the workbook yet. Kickoff times are shown where the schedule has them.</p>
 </div></section>
 </main>
-<main id="v-playoff-picture" hidden>
+<main id="v-projected-playoff" hidden>
 <div class="shell">
   <section class="hero">
-    <div><div class="eyebrow">2026 season · Projected finish</div><h1>Playoff<br><span>Picture.</span></h1></div>
+    <div><div class="eyebrow">2026 season · Projected finish</div><h1>Projected<br><span>Playoff.</span></h1></div>
     <div><p class="lede">Where the season is projected to end: the 12-team bracket, the final strength-of-record ranking and every conference race.</p>
       <div class="stamp">Standings through Sat Nov 7<br>Remaining games projected from the Nov 9 workbook</div></div>
   </section>
   <section class="stats" id="pstats"></section>
 </div>
 <section class="board"><div class="shell">
-  <div class="panel setbar"><div class="sbt">Settings</div>
-    <label>Title-game weight in strength of record <span class="pct"><input type="number" id="ccwt" min="0" max="100" step="5" value="50" inputmode="numeric" aria-label="Title-game weight, percent">%</span></label>
-    <label>Group of Six bid goes to <select class="sel" id="g6rule" aria-label="Group of Six bid rule"><option value="champ">the highest-ranked champion</option><option value="team">the highest-ranked team</option></select></label>
-    <label>Ranking tiebreakers <select class="sel" id="rmode" aria-label="Ranking tiebreakers"><option value="cm">Head-to-head and common opponents</option><option value="wb">As in the workbook</option></select></label>
-    <label class="cmset">Teams are comparable within <span class="pct"><input type="number" id="band" min="0" max="5" step="0.05" value="0.75" aria-label="Comparable band in strength of record"></span> SOR</label>
-    <label class="cmset">Common opponents worth <span class="pct"><input type="number" id="cov" min="0" max="2" step="0.05" value="0.25" aria-label="Value per net game against common opponents"></span> per net game, up to <span class="pct"><input type="number" id="cocap" min="0" max="3" step="0.05" value="0.5" aria-label="Cap on common-opponent credit"></span></label>
-    <span class="sbb"><button class="btn" id="ccreset">Reset title games</button><button class="btn" id="bkreset">Clear bracket picks</button></span>
-  </div>
   <div class="subtabs" id="ptabs" role="tablist">
-    <button class="tab" data-pt="field" aria-pressed="true"><small>1</small> The field</button><button class="tab" data-pt="bracket" aria-pressed="false"><small>2</small> Bracket</button><button class="tab" data-pt="title" aria-pressed="false"><small>3</small> Title games <em style="font-style:normal;font-weight:400;color:var(--mute)">· adjust results</em></button><button class="tab" data-pt="rank" aria-pressed="false">Rankings</button><button class="tab" data-pt="conf" aria-pressed="false">Conference standings</button><button class="tab" data-pt="method" aria-pressed="false">Rules and method</button>
+    <button class="tab" data-pt="field" aria-pressed="true"><small>1</small> The field</button><button class="tab" data-pt="bracket" aria-pressed="false"><small>2</small> Bracket</button><button class="tab" data-pt="title" aria-pressed="false"><small>3</small> Title games <em style="font-style:normal;font-weight:400;color:var(--mute)">· adjust results</em></button><button class="tab" data-pt="games" aria-pressed="false"><small>4</small> Remaining games <em style="font-style:normal;font-weight:400;color:var(--mute)">· adjust results</em></button><button class="tab" data-pt="p24" aria-pressed="false">24-team format</button><button class="tab" data-pt="rank" aria-pressed="false">Rankings</button><button class="tab" data-pt="conf" aria-pressed="false">Conference standings</button><button class="tab" data-pt="settings" aria-pressed="false">Settings</button><button class="tab" data-pt="method" aria-pressed="false">Rules and method</button>
   </div>
 
   <div class="psec" data-ps="title" hidden>
-    <div class="bhead"><h2>Conference championship games</h2><p>The field and bracket assume the model favorite wins every conference title game. <b style="color:var(--ink)">You can adjust those projected results here</b>: select either team to make it the winner, and strength of record, the field and the bracket all update. Each card shows the projected top two with the model’s projected score, spread and total.</p></div>
-    <p class="note" id="ccnote" style="margin:16px 0 14px"></p>
+    <div class="bhead"><h2>Conference championship games</h2><p>The field and bracket assume the model favorite wins every conference title game, between the top two in each conference’s projected standings. <b style="color:var(--ink)">You can adjust those projected results here</b>: select either team to make it the winner, and strength of record, the field and the bracket all update. Each card shows the projected top two with the model’s projected score, spread and total.</p></div>
+    <div class="controls" style="border:0;margin:16px 0 14px;gap:14px"><button class="btn" id="ccreset" style="margin-bottom:10px">Reset title games</button><span class="note" id="ccnote" style="margin:0 0 10px"></span></div>
     <div class="ccg" id="ccg"></div>
     <div class="nx"><button class="btn" data-pt="field">See the updated field →</button></div>
   </div>
@@ -313,9 +354,32 @@ footer{border-top:1px solid var(--line);padding:26px 0 50px;font-size:12.5px;lin
 
   <div class="psec" data-ps="bracket" hidden>
     <div class="bhead"><h2>Projected bracket</h2><p>The first round is set by the seeds, with the model’s projected spread and total. <b style="color:var(--ink)">Select a winner in each game</b> and the next round fills in with its own spread and total, through to the championship. First-round games are at the higher seed’s stadium; later rounds are neutral.</p></div>
-    <p class="note" id="bknote" style="margin:16px 0 14px"></p>
+    <div class="controls" style="border:0;margin:16px 0 14px;gap:14px"><button class="btn" id="bkreset" style="margin-bottom:10px">Clear bracket picks</button><span class="note" id="bknote" style="margin:0 0 10px"></span></div>
     <div class="rounds" id="bracket"></div>
     <div class="nx"><button class="btn" data-pt="title">Adjust the title-game results →</button></div>
+  </div>
+
+  <div class="psec" data-ps="games" hidden>
+    <div class="bhead"><h2>Remaining regular-season games</h2><p>Every game still to be played is set to the model favorite. <b style="color:var(--ink)">Select the other team to change a result</b>: records, conference standings, the title-game pairings, strength of record, the field and the bracket all update. Each card shows the model’s projected spread and total.</p></div>
+    <div class="controls" style="border:0;margin:18px 0 6px;gap:10px"><select class="sel" id="rgs" aria-label="Which games"><option value="top">Games involving the top 25</option><option value="all">All remaining games</option><option value="chg">Only results I changed</option></select><select class="sel" id="rgc" aria-label="Conference"></select><input id="rgq" type="search" placeholder="Find a team" aria-label="Find a team" style="margin:0 0 10px"><button class="btn" id="rgreset" style="margin-bottom:10px">Reset regular season</button></div>
+    <p class="note" id="rgnote" style="margin:0 0 18px"></p>
+    <div id="rgl"></div>
+    <div class="nx"><button class="btn" data-pt="field">See the updated field →</button></div>
+  </div>
+
+  <div class="psec" data-ps="p24" hidden>
+    <div class="bhead"><h2>Hypothetical 24-team playoff</h2><p>The same projected ranking, title games and results as the rest of this page, run through a 24-team format. All 24 teams are seeded. Seeds 1–8 get a first-round bye and host the second round; seeds 9–16 host seeds 17–24 in the first round. Choose who gets an automatic bid below.</p></div>
+    <div class="panel setbar" style="margin-top:26px">
+      <div><div class="sbt" style="margin-bottom:10px">Automatic bid for the champion of</div><div class="abs" id="ab24"></div></div>
+      <label>Extra Group of Six bid <select class="sel" id="g624" aria-label="Extra Group of Six bid"><option value="team">Highest-ranked Group of Six team</option><option value="champ">Highest-ranked Group of Six champion</option><option value="none">None</option></select></label>
+      <label>Notre Dame guaranteed a bid if ranked in the top <span class="pct"><input type="number" id="nd24" min="0" max="24" step="1" value="0" inputmode="numeric" aria-label="Notre Dame guarantee rank"></span> <span>(0 turns this off)</span></label>
+      <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn" id="ab24reset">Reset to the proposed format</button><button class="btn" id="bk24reset">Clear bracket picks</button></div>
+    </div>
+    <p class="note" id="f24lede" style="margin:16px 0 14px;font-size:14px"></p>
+    <div class="tw"><table class="rank sm" id="f24"></table></div>
+    <div class="bhead sec"><h2>24-team bracket</h2><p>The first round is set by the seeds. <b style="color:var(--ink)">Select a winner in each game</b> and the next round fills in with its projected spread and total. The first two rounds are on campus at the higher seed; later rounds are neutral.</p></div>
+    <p class="note" id="bk24note" style="margin:16px 0 14px"></p>
+    <div class="rounds r5" id="b24"></div>
   </div>
 
   <div class="psec" data-ps="rank" hidden>
@@ -325,8 +389,20 @@ footer{border-top:1px solid var(--line);padding:26px 0 50px;font-size:12.5px;lin
   </div>
 
   <div class="psec" data-ps="conf" hidden>
-    <div class="bhead"><h2>Projected final conference standings</h2><p>Regular season only: each team’s current record plus the projected favorite in every remaining game. Order is the projected conference finish. Select a team for its game-by-game detail.</p></div>
+    <div class="bhead"><h2>Projected final conference standings</h2><p>Regular season only: each team’s current record plus its remaining games as projected or as you picked them. Order is the projected conference finish. Select a team for its game-by-game detail.</p></div>
     <div class="confs" id="confs" style="margin-top:26px"></div>
+  </div>
+
+  <div class="psec" data-ps="settings" hidden>
+    <div class="bhead"><h2>Settings</h2><p>The judgement calls behind the projection. Change any of them and the field, bracket and rankings recalculate straight away.</p></div>
+    <div style="height:26px"></div>
+  <div class="panel setbar">
+    <label>Title-game weight in strength of record <span class="pct"><input type="number" id="ccwt" min="0" max="100" step="5" value="50" inputmode="numeric" aria-label="Title-game weight, percent">%</span></label>
+    <label>Group of Six bid goes to <select class="sel" id="g6rule" aria-label="Group of Six bid rule"><option value="champ">the highest-ranked champion</option><option value="team">the highest-ranked team</option></select></label>
+    <label>Ranking tiebreakers <select class="sel" id="rmode" aria-label="Ranking tiebreakers"><option value="cm">Head-to-head and common opponents</option><option value="wb">As in the workbook</option></select></label>
+    <label class="cmset">Teams are comparable within <span class="pct"><input type="number" id="band" min="0" max="5" step="0.05" value="0.75" aria-label="Comparable band in strength of record"></span> SOR</label>
+    <label class="cmset">Common opponents worth <span class="pct"><input type="number" id="cov" min="0" max="2" step="0.05" value="0.25" aria-label="Value per net game against common opponents"></span> per net game, up to <span class="pct"><input type="number" id="cocap" min="0" max="3" step="0.05" value="0.5" aria-label="Cap on common-opponent credit"></span></label>
+  </div>
   </div>
 
   <div class="psec" data-ps="method" hidden>
@@ -395,7 +471,10 @@ function render(){const s=q.trim().toLowerCase();
   if(!rows.length){$('#list').innerHTML='<div class="empty">No games match.</div>';return}
   const days={};rows.forEach(g=>(days[g.date]=days[g.date]||[]).push(g));
   $('#list').innerHTML=Object.keys(days).sort().map(d=>{const dt=new Date(d+'T12:00:00');
-    return `<div class="day">${dt.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'})}<small>${days[d].length} game${days[d].length>1?'s':''}</small></div><div class="grid">${days[d].map(card).join('')}</div>`}).join('')}
+    return `<div class="day">${dt.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'})}<small>${days[d].length} game${days[d].length>1?'s':''}</small></div><div class="tw"><table class="rank sm" style="min-width:1000px">${ghead}<tbody>${days[d].map(grow).join('')}</tbody></table></div>`}).join('')}
+const ghead='<thead><tr><th>Game</th><th class="n">Proj. score</th><th>Model line</th><th>Vegas line</th><th class="n">Model total</th><th class="n">Vegas total</th><th class="n">51+ chance</th><th>Targeted picks</th></tr></thead>';
+function grow(g){const vline=g.line===0?'Pick’em':`${esc(g.fav)} −${Math.abs(g.line).toFixed(1)}`,ml=Math.abs(g.mHomeSpread)<0.25?'Even':`${esc(g.mHomeSpread<0?g.home:g.away)} −${Math.abs(g.mHomeSpread).toFixed(1)}`;
+  return `<tr><td><span class="tclk inl" tabindex="0" data-prof="${esc(g.away)}">${esc(g.away)}</span> <span style="color:var(--mute)">at</span> <span class="tclk inl" tabindex="0" data-prof="${esc(g.home)}">${esc(g.home)}</span><div style="font-size:12px;color:var(--mute);margin-top:2px">${t12(g.time)}${g.tv?' · '+esc(g.tv):''}</div></td><td class="n" style="white-space:nowrap"><b>${g.mAway.toFixed(1)} – ${g.mHome.toFixed(1)}</b></td><td style="white-space:nowrap"><b>${ml}</b></td><td style="white-space:nowrap;color:var(--mute)">${vline}</td><td class="n"><b>${g.mTotal.toFixed(1)}</b></td><td class="n" style="color:var(--mute)">${g.total.toFixed(1)}</td><td class="n" style="white-space:nowrap;color:var(--mute)">${pct(g.away51)} / ${pct(g.home51)}</td><td>${g.picks.length?g.picks.map(p=>`<span class="pill">${esc(p.p)}<small>${p.e.toFixed(1)} pt edge</small></span>`).join(''):'<span style="color:var(--mute);font-size:13px">No edge</span>'}</td></tr>`}
 controls();render();
 
 // ---- 51+ page ----
@@ -488,19 +567,19 @@ $('#bstats').innerHTML=[['Record',rec(all),(all.w/(all.w+all.l)*100).toFixed(1)+
  const mn=Math.min(...pts),mx=Math.max(...pts),lo=Math.floor(mn/5)*5,hi=Math.ceil(mx/5)*5;
  const X=i=>L+i/(pts.length-1)*(W-L-R),Y=v=>Tp+(hi-v)/(hi-lo)*(H-Tp-Bt);
  const line=pts.map((v,i)=>(i?'L':'M')+X(i).toFixed(1)+' '+Y(v).toFixed(1)).join('');
- let g='';for(let v=lo;v<=hi;v+=5)g+=`<line x1="${L}" x2="${W-R}" y1="${Y(v)}" y2="${Y(v)}" stroke="${v===0?'#a9ab9f':'#e3e2db'}"/><text x="${L-8}" y="${Y(v)+4}" text-anchor="end" font-size="11" fill="#676960" font-family="Geist Mono,monospace">${v>0?'+':v<0?'−':''}${Math.abs(v)}</text>`;
- let wl='';wks.forEach(w=>{const i0=B.findIndex(r=>r.week===w),i1=B.length-[...B].reverse().findIndex(r=>r.week===w);if(i0>0)wl+=`<line x1="${X(i0)}" x2="${X(i0)}" y1="${Tp}" y2="${H-Bt}" stroke="#e3e2db" stroke-dasharray="2 3"/>`;wl+=`<text x="${(X(i0)+X(i1))/2}" y="${H-10}" text-anchor="middle" font-size="11" fill="#676960" font-family="Geist Mono,monospace">W${w}</text>`});
+ let g='';for(let v=lo;v<=hi;v+=5)g+=`<line x1="${L}" x2="${W-R}" y1="${Y(v)}" y2="${Y(v)}" stroke="${v===0?'#9AA1AD':'#E3E6EB'}"/><text x="${L-8}" y="${Y(v)+4}" text-anchor="end" font-size="11" fill="#555B66" font-family="Inter,sans-serif">${v>0?'+':v<0?'−':''}${Math.abs(v)}</text>`;
+ let wl='';wks.forEach(w=>{const i0=B.findIndex(r=>r.week===w),i1=B.length-[...B].reverse().findIndex(r=>r.week===w);if(i0>0)wl+=`<line x1="${X(i0)}" x2="${X(i0)}" y1="${Tp}" y2="${H-Bt}" stroke="#E3E6EB" stroke-dasharray="2 3"/>`;wl+=`<text x="${(X(i0)+X(i1))/2}" y="${H-10}" text-anchor="middle" font-size="11" fill="#555B66" font-family="Inter,sans-serif">W${w}</text>`});
  const li=pts.indexOf(mn),e=pts[pts.length-1];
- $('#bchart').innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Cumulative units by bet, ending at ${u(e)} units">${g}${wl}<path d="${line}L${X(pts.length-1)} ${Y(0)}L${X(0)} ${Y(0)}Z" fill="#1f4630" opacity=".08"/><path d="${line}" fill="none" stroke="#1f4630" stroke-width="2" stroke-linejoin="round"/>
- <circle cx="${X(li)}" cy="${Y(mn)}" r="3.5" fill="#a03224"/><text x="${X(li)}" y="${Y(mn)+16}" text-anchor="middle" font-size="11" fill="#a03224" font-family="Geist Mono,monospace">low ${u(mn)}</text>
- <circle cx="${X(pts.length-1)}" cy="${Y(e)}" r="4" fill="#1f4630"/><text x="${X(pts.length-1)+8}" y="${Y(e)+4}" font-size="13" font-weight="600" fill="#1f4630" font-family="Geist Mono,monospace">${u(e)}</text></svg>`;}
+ $('#bchart').innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Cumulative units by bet, ending at ${u(e)} units">${g}${wl}<path d="${line}L${X(pts.length-1)} ${Y(0)}L${X(0)} ${Y(0)}Z" fill="#1F3BFF" opacity=".08"/><path d="${line}" fill="none" stroke="#1F3BFF" stroke-width="2" stroke-linejoin="round"/>
+ <circle cx="${X(li)}" cy="${Y(mn)}" r="3.5" fill="#C22A1C"/><text x="${X(li)}" y="${Y(mn)+16}" text-anchor="middle" font-size="11" fill="#C22A1C" font-family="Inter,sans-serif">low ${u(mn)}</text>
+ <circle cx="${X(pts.length-1)}" cy="${Y(e)}" r="4" fill="#1F3BFF"/><text x="${X(pts.length-1)+8}" y="${Y(e)+4}" font-size="13" font-weight="600" fill="#1F3BFF" font-family="Inter,sans-serif">${u(e)}</text></svg>`;}
 {const f=ag(B.filter(r=>r.fifty)),rest=ag(B.filter(r=>!r.fifty)),nk=ag(B.filter(r=>r.nuke)),st=ag(B.filter(r=>r.star)),sw=Math.min(...B.filter(r=>r.star).map(r=>r.week)),own=ag(B.filter(r=>!r.star&&r.week>=sw)),big=[...B].sort((a,b)=>b.pnl-a.pnl)[0];
  $('#bsrc').textContent=`${Math.round(f.pnl/all.pnl*100)}% of the season’s profit comes from ${f.n} team-total overs at 50.5, the long-shot 51+ plays. The other ${rest.n} bets are close to break-even.`;
  $('#bcall').innerHTML=[['51+ team total overs',u(f.pnl)+'u',`<b>${rec(f)}</b> on ${f.stake} units staked. These lose more often than they win, but the long prices carry them. The biggest was ${esc(big.desc)} at +${big.odds}, worth ${u(big.pnl)} units.`],
   ['Everything else',u(rest.pnl)+'u',`<b>${rec(rest)}</b> on ${rest.stake} units staked, a ${roi(rest)} return.`],
   ['Model Plays vs. own picks',u(st.pnl)+'u vs '+u(own.pnl)+'u',`<b>Model Plays (*):</b> ${rec(st)}, ${roi(st)} on ${st.stake} units. <b>Own picks:</b> ${rec(own)}, ${roi(own)} on ${own.stake} units. Model Plays are marked from Week ${sw} only, so this is one week of bets and too few to draw a conclusion.`]].map(([h,c,p],i)=>`<div class="panel"><div class="num">0${i+1}</div><h3>${h}</h3><div class="cut">${c}</div><p>${p}</p></div>`).join('');}
 function tbl(id,head,groups){const mxa=Math.max(...groups.map(([,a])=>Math.abs(a.pnl)));
- $(id).innerHTML=`<thead><tr><th>${head}</th><th class="n">Bets</th><th>Record</th><th class="n">Units</th><th></th><th class="n">ROI</th></tr></thead><tbody>`+groups.map(([k,a])=>`<tr><td><b>${k}</b></td><td class="n">${a.n}</td><td class="n" style="text-align:left">${rec(a)}</td><td class="n ${cls(a.pnl)}">${u(a.pnl)}</td><td><div class="dv"><div class="l">${a.pnl<0?`<i style="width:${Math.abs(a.pnl)/mxa*100}%;background:#a03224"></i>`:''}</div><div>${a.pnl>0?`<i style="width:${a.pnl/mxa*100}%;background:#1f4630"></i>`:''}</div></div></td><td class="n">${roi(a)}</td></tr>`).join('')+`<tr><td><b>Total</b></td><td class="n">${all.n}</td><td class="n" style="text-align:left">${rec(all)}</td><td class="n ${cls(all.pnl)}">${u(all.pnl)}</td><td></td><td class="n">${roi(all)}</td></tr></tbody>`}
+ $(id).innerHTML=`<thead><tr><th>${head}</th><th class="n">Bets</th><th>Record</th><th class="n">Units</th><th></th><th class="n">ROI</th></tr></thead><tbody>`+groups.map(([k,a])=>`<tr><td><b>${k}</b></td><td class="n">${a.n}</td><td class="n" style="text-align:left">${rec(a)}</td><td class="n ${cls(a.pnl)}">${u(a.pnl)}</td><td><div class="dv"><div class="l">${a.pnl<0?`<i style="width:${Math.abs(a.pnl)/mxa*100}%;background:#C22A1C"></i>`:''}</div><div>${a.pnl>0?`<i style="width:${a.pnl/mxa*100}%;background:#0A7A3E"></i>`:''}</div></div></td><td class="n">${roi(a)}</td></tr>`).join('')+`<tr><td><b>Total</b></td><td class="n">${all.n}</td><td class="n" style="text-align:left">${rec(all)}</td><td class="n ${cls(all.pnl)}">${u(all.pnl)}</td><td></td><td class="n">${roi(all)}</td></tr></tbody>`}
 tbl('#bweek','Week',wks.map(w=>['Week '+w,ag(B.filter(r=>r.week===w))]));
 const TL={spread:'Spread',ml:'Moneyline',total:'Total',tt:'Team total',prop:'Prop',parlay:'Parlay'};
 tbl('#btype','Bet type',Object.keys(TL).map(k=>[TL[k],ag(B.filter(r=>r.type===k))]).filter(([,a])=>a.n));
@@ -565,8 +644,8 @@ let CUR={},CCG=[];
 function dsor(g){const t=PT[g],s=t.sor,c=CUR[g],gs=tg(g),fin=gs.filter(x=>x.s==='F'),fut=gs.filter(x=>x.s!=='F'),cg=CCG.find(x=>x.a===g||x.b===g);
   const ef=fin.reduce((a,x)=>a+bp(x.o),0);
   const line=(d,opp,lab,res,w,f,wt)=>{const b=bp(opp),fcs=!PT[opp],cr=(w?1:0)-b;return `<tr class="${f?'':'fut'}"><td>${d}</td><td>${lab} <b>${esc(sn(opp))}</b></td><td class="n">${fcs?'FCS':'#'+PT[opp].sor.prRank}</td><td class="n">${sg(brt(opp))}</td><td>${res}</td><td class="n">${Math.round(b*100)}%</td><td class="n ${cls(cr)}">${wt==null?s2(cr):s2(cr*wt)+' <span style="color:var(--mute);font-weight:400">('+s2(cr)+' × '+Math.round(wt*100)+'%)</span>'}</td></tr>`};
-  const won=x=>x.s==='F'?x.pf>x.pa:(x.s==='A'?true:x.pf>x.pa);
-  const row=x=>{const f=x.s==='F',w=won(x);return line(fd(x.d),x.o,loc(x),f?`<span class="res ${w?'W':'L'}">${w?'W':'L'}</span> ${x.pf}–${x.pa}`:`Proj. ${w?'W':'L'}`,w,f)};
+  const won=x=>winnerOf(x)===(x.home?x.h:x.a);
+  const row=x=>{const f=x.s==='F',w=won(x);return line(fd(x.d),x.o,loc(x),f?`<span class="res ${w?'W':'L'}">${w?'W':'L'}</span> ${x.pf}–${x.pa}`:`${OV[x.i]?'Picked':'Proj.'} ${w?'W':'L'}`,w,f)};
   const co=cg?(cg.a===g?cg.b:cg.a):null,cw=cg&&cg.win===g,adj=c.adj!==c.raw;
   const imp=fin.map(x=>({x,w:won(x),cr:(won(x)?1:0)-bp(x.o)})),bw=imp.filter(i=>i.w).sort((a,b)=>b.cr-a.cr).slice(0,3),wl=imp.filter(i=>!i.w).sort((a,b)=>a.cr-b.cr).slice(0,3);
   const bwr=i=>`<div class="bwr"><div>${loc(i.x)} <b style="font-family:var(--sans)">${esc(sn(i.x.o))}</b>, ${i.x.pf}–${i.x.pa}<small>${fd(i.x.d)} · ${PT[i.x.o]?'power rank #'+PT[i.x.o].sor.prRank+', now '+PT[i.x.o].w+'–'+PT[i.x.o].l:'FCS opponent'} · benchmark wins ${Math.round(bp(i.x.o)*100)}%</small></div><b class="${cls(i.cr)}">${s2(i.cr)}</b></div>`;
@@ -577,25 +656,30 @@ function dsor(g){const t=PT[g],s=t.sor,c=CUR[g],gs=tg(g),fin=gs.filter(x=>x.s===
   <div class="dsec"><h4>How this number was calculated</h4><p style="margin-top:0"><b>1. Power rating.</b> ${esc(t.short)}’s average margin, with each game capped at ${PC.cap} points, is <b>${sg(t.acm)}</b>. Adding the average rating of its opponents (<b>${sg(s.sos)}</b>) and repeating that across all teams six times gives a power rating of <b>${sg(s.pr)}</b>, No. ${s.prRank} in FBS.</p>
    <p><b>2. The benchmark.</b> The 25th-best power rating in FBS is <b>${sg(PC.bench)}</b>. For every opponent on the schedule, the “benchmark win” column is the chance a team of that quality would beat that opponent. FCS opponents are rated ${sg(PC.fcs)}.</p>
    <p><b>3. Current strength of record.</b> ${esc(t.short)} has <b>${t.w}</b> wins. The benchmark team would expect <b>${ef.toFixed(2)}</b> against the same ${fin.length} opponents. ${t.w} − ${ef.toFixed(2)} = <b>${s2(s.sor)}</b>, No. ${s.rank}.</p>
-   <p><b>4. Projected final.</b> Adding the ${fut.length} remaining regular-season game${fut.length===1?'':'s'} with the model’s favorite winning each gives ${c.rw} wins against a benchmark expectation of <b>${c.bench.toFixed(2)}</b>: ${c.rw} − ${c.bench.toFixed(2)} = <b>${s2(c.rw-c.bench)}</b>.${cg?` The ${cfs(cg.conf)} championship game, selected as a ${cw?'win':'loss'} against ${esc(sn(co))}, is worth ${s2(c.cc)} at full value and counts at ${Math.round(CCW*100)}%, which brings the total to <b>${s2(c.raw)}</b>.`:''}${adj?` Because ${esc(t.short)} is a power-conference team projected to finish the regular season with ${PC.floorL} loss or fewer, the low-loss floor lifts that to <b>${s2(c.adj)}</b>.`:''}${Math.abs(c.co)>0.004?` Results against opponents it shares with comparable teams ${c.co>0?'add':'take off'} <b>${Math.abs(c.co).toFixed(2)}</b>, for a ranking value of <b>${s2(c.base)}</b>.`:''}${c.h2h?` It is ranked directly ahead of ${esc(sn(c.h2h))} because it won their head-to-head game${RMODE==='wb'?' and they have the same projected record':' and the two are close enough to be comparable'}.`:''} That ranks No. ${c.rank}${c.rank!==c.rawRank?`, against No. ${c.rawRank} before the floor and tiebreakers were applied across the list`:''}.</p></div>
+   <p><b>4. Projected final.</b> Adding the ${fut.length} remaining regular-season game${fut.length===1?'':'s'} with each one going as projected${Object.keys(OV).length?' or as you picked':''} gives ${c.rw} wins against a benchmark expectation of <b>${c.bench.toFixed(2)}</b>: ${c.rw} − ${c.bench.toFixed(2)} = <b>${s2(c.rw-c.bench)}</b>.${cg?` The ${cfs(cg.conf)} championship game, selected as a ${cw?'win':'loss'} against ${esc(sn(co))}, is worth ${s2(c.cc)} at full value and counts at ${Math.round(CCW*100)}%, which brings the total to <b>${s2(c.raw)}</b>.`:''}${adj?` Because ${esc(t.short)} is a power-conference team projected to finish the regular season with ${PC.floorL} loss or fewer, the low-loss floor lifts that to <b>${s2(c.adj)}</b>.`:''}${Math.abs(c.co)>0.004?` Results against opponents it shares with comparable teams ${c.co>0?'add':'take off'} <b>${Math.abs(c.co).toFixed(2)}</b>, for a ranking value of <b>${s2(c.base)}</b>.`:''}${c.h2h?` It is ranked directly ahead of ${esc(sn(c.h2h))} because it won their head-to-head game${RMODE==='wb'?' and they have the same projected record':' and the two are close enough to be comparable'}.`:''} That ranks No. ${c.rank}${c.rank!==c.rawRank?`, against No. ${c.rawRank} before the floor and tiebreakers were applied across the list`:''}.</p></div>
   <div class="dsec"><h4>Game by game</h4><div class="dtw"><table class="dt"><thead><tr><th>Date</th><th>Opponent</th><th class="n">Opp. power rank</th><th class="n">Opp. rating</th><th>Result</th><th class="n">Benchmark win</th><th class="n">Credit</th></tr></thead><tbody>${fin.map(row).join('')}<tr class="tot"><td colspan="4">Played: ${t.w}–${t.l}</td><td>${t.w} wins</td><td class="n">${ef.toFixed(2)}</td><td class="n">${s2(s.sor)}</td></tr>${fut.map(row).join('')}<tr class="tot"><td colspan="4">Projected regular season: ${c.rw}–${c.rl}</td><td>${c.rw} wins</td><td class="n">${c.bench.toFixed(2)}</td><td class="n">${s2(c.rw-c.bench)}</td></tr>${cg?line('Title game',co,'vs',`Selected ${cw?'W':'L'}`,cw,false,CCW)+`<tr class="tot"><td colspan="4">Projected final: ${c.w}–${c.l}</td><td></td><td class="n"></td><td class="n">${s2(c.raw)}</td></tr>`:''}</tbody></table></div>
    <p>Credit is 1 for a win or 0 for a loss, minus the benchmark team’s chance of winning that game. Beating a strong opponent earns close to a full point; beating a weak one earns almost nothing; losing to a weak one costs nearly a full point. Opponent ratings are held at today’s values for the remaining games.</p></div>`}
 // ---- playoff picture ----
 const P4=['Southeastern Conference','Big Ten Conference','Big 12 Conference','Atlantic Coast Conference'],G6=['American Conference','Conference USA','Mid-American Conference','Mountain West Conference','Pac-12 Conference','Sun Belt Conference'],HOSTED=['American Conference','Conference USA','Mountain West Conference','Pac-12 Conference','Sun Belt Conference'];
 const isP=g=>P4.includes(PT[g].conf)||PT[g].name.startsWith('Notre Dame'),TK=Object.keys(PT);
 // regular-season base: wins, losses, benchmark expectation, who beat whom
-const BASE={},BEAT=new Set(),BASEG=[];TK.forEach(g=>BASE[g]={w:0,l:0,bench:0});
-PG.forEach(x=>{const aw=x.s==='A'?!!PT[x.a]:x.ap>x.hp,w=aw?x.a:x.h,l=aw?x.h:x.a;if(BASE[w]){BASE[w].w++;BASE[w].bench+=bp(l)}if(BASE[l]){BASE[l].l++;BASE[l].bench+=bp(w)}BEAT.add(w+'>'+l);BASEG.push([w,l])});
+PG.forEach((x,i)=>x.i=i);
+let BASE={},BEAT=new Set(),BASEG=[],OV={},CCP={},NOCCG=false;
+const defWin=x=>x.s==='A'?(PT[x.a]?x.a:x.h):(x.ap>x.hp?x.a:x.h),winnerOf=x=>x.s==='F'?(x.ap>x.hp?x.a:x.h):(OV[x.i]||defWin(x));
+function season(){BASE={};BEAT=new Set();BASEG=[];TK.forEach(g=>BASE[g]={w:0,l:0,bench:0,cw:0,cl:0});
+  PG.forEach(x=>{const w=winnerOf(x),l=w===x.a?x.h:x.a;if(BASE[w]){BASE[w].w++;BASE[w].bench+=bp(l);if(x.c)BASE[w].cw++}if(BASE[l]){BASE[l].l++;BASE[l].bench+=bp(w);if(x.c)BASE[l].cl++}BEAT.add(w+'>'+l);BASEG.push([w,l])});
+  TK.forEach(g=>{const b=BASE[g],raw=b.w-b.bench;b.pct=b.cw+b.cl?b.cw/(b.cw+b.cl):0;b.adj0=isP(g)&&b.l<=PC.floorL?Math.max(raw,PC.floor):raw});
+  TK.forEach(g=>{const b=BASE[g],grp=TK.filter(o=>PT[o].conf===PT[g].conf&&PT[o].div===PT[g].div);b.fin=PT[g].conf==='FBS Independents'?null:1+grp.filter(o=>BASE[o].pct>b.pct+1e-9).length})}
 const half=v=>Math.round(v*2)/2,ppts=(a,b,pace,h)=>M.b0+M.bOff*PT[a].off+M.bDef*PT[b].deff+M.bPace*pace+M.bHome*h;
 function gproj(a,b,home){const pace=(PT[a].pace+PT[b].pace)/2,pa=ppts(a,b,pace,home===a?1:home===b?-1:0),pb=ppts(b,a,pace,home===b?1:home===a?-1:0),m=half(Math.abs(pa-pb));
   return {pa,pb,fav:pa>=pb?a:b,spread:m===0?'Pick’em':esc(sn(pa>=pb?a:b))+' −'+m.toFixed(1),total:half(pa+pb).toFixed(1)}}
 // title games: top two by projected conference finish (division winners in the Sun Belt)
-{const r0=g=>PT[g].psor.rank;[...P4,...G6].forEach(c=>{const rows=PP.ST.filter(s=>s.conf===c);let a,b,tie=false;
-  if(rows.some(s=>s.div)){const ds=[...new Set(rows.map(s=>s.div))].map(d=>rows.filter(s=>s.div===d).sort((x,y)=>x.fin-y.fin||r0(x.gd)-r0(y.gd))[0]).sort((x,y)=>r0(x.gd)-r0(y.gd));a=ds[0].gd;b=ds[1].gd}
-  else{const s=rows.slice().sort((x,y)=>x.fin-y.fin||r0(x.gd)-r0(y.gd));a=s[0].gd;b=s[1].gd;tie=s[2]&&s[2].fin===s[1].fin}
-  const home=HOSTED.includes(c)?a:null,p=gproj(a,b,home);CCG.push({conf:c,a,b,home,p,fav:p.fav,win:p.fav,tie})})}
+function buildCCG(){const ordr=(x,y)=>BASE[x].fin-BASE[y].fin||BASE[y].adj0-BASE[x].adj0;return [...P4,...G6].map(c=>{const tm=TK.filter(g=>PT[g].conf===c);let a,b,tie=false;
+  if(tm.some(g=>PT[g].div)){const ds=[...new Set(tm.map(g=>PT[g].div))].map(d=>tm.filter(g=>PT[g].div===d).sort(ordr)[0]).sort((x,y)=>BASE[y].adj0-BASE[x].adj0);a=ds[0];b=ds[1]}
+  else{const s=tm.slice().sort(ordr);a=s[0];b=s[1];tie=s[2]&&BASE[s[2]].fin===BASE[s[1]].fin}
+  const home=HOSTED.includes(c)?a:null,p=gproj(a,b,home),pk=CCP[c];return {conf:c,a,b,home,p,fav:p.fav,win:pk===a||pk===b?pk:p.fav,tie}})}
 let g6rule='champ',CCW=0.5,BK={},RMODE='cm',BAND=0.75,COV=0.25,COCAP=0.5,CMP=[null,null],RES={};
-function compute(){const S={};TK.forEach(g=>S[g]={w:BASE[g].w,l:BASE[g].l,bench:BASE[g].bench});const beat=new Set(BEAT);
+function compute(){season();CCG=NOCCG?[]:buildCCG();const S={};TK.forEach(g=>S[g]={w:BASE[g].w,l:BASE[g].l,bench:BASE[g].bench});const beat=new Set(BEAT);
   TK.forEach(g=>{const s=S[g];s.rw=s.w;s.rl=s.l;s.cc=0});
   CCG.forEach(c=>{const w=c.win,l=w===c.a?c.b:c.a;S[w].w++;S[w].cc=1-bp(l);S[l].l++;S[l].cc=-bp(w);beat.add(w+'>'+l)});
   TK.forEach(g=>{const s=S[g];s.raw=s.rw-s.bench+CCW*s.cc;s.adj=isP(g)&&s.rl<=PC.floorL?Math.max(s.raw,PC.floor):s.raw});
@@ -619,9 +703,10 @@ function selectField(S){const all=TK.slice().sort((a,b)=>S[a].rank-S[b].rank),rk
   const nd=TK.find(g=>PT[g].name.startsWith('Notre Dame'));if(nd&&rk(nd)<=12)why[nd]='Notre Dame, top 12';
   const field=Object.keys(why);for(const g of all){if(field.length>=12)break;if(!field.includes(g)){field.push(g);why[g]='At-large'}}
   field.sort((a,b)=>rk(a)-rk(b));return {all,field,why,out:all.filter(g=>!field.includes(g)).slice(0,4)}}
-let psAll=false,DEF=null;
-const wonG=x=>x.s==='F'?x.pf>x.pa:(x.s==='A'?true:x.pf>x.pa);
-function gamesOf(g){const L=tg(g).map(x=>({o:x.o,w:wonG(x),f:x.s==='F',pf:x.pf,pa:x.pa,txt:x.s==='F'?`${wonG(x)?'W':'L'} ${x.pf}–${x.pa}`:`Proj. ${wonG(x)?'W':'L'}`,when:fd(x.d),where:loc(x)}));const cg=CCG.find(c=>c.a===g||c.b===g);if(cg)L.push({o:cg.a===g?cg.b:cg.a,w:cg.win===g,f:false,txt:`Title game ${cg.win===g?'W':'L'}`,when:'Title game',where:'vs'});return L}
+let psAll=false,DEF=null,RGS='top',RGC='all',RGQ='';
+let LAST24=null;const F24D=()=>({conf:Object.fromEntries([...P4.map(c=>[c,true]),...G6.map(c=>[c,false])]),g6:'team',nd:0});let F24=F24D(),BK24={};
+const wonG=x=>winnerOf(x)===(x.home?x.h:x.a);
+function gamesOf(g){const L=tg(g).map(x=>({o:x.o,w:wonG(x),f:x.s==='F',pf:x.pf,pa:x.pa,txt:x.s==='F'?`${wonG(x)?'W':'L'} ${x.pf}–${x.pa}`:`${OV[x.i]?'Picked':'Proj.'} ${wonG(x)?'W':'L'}`,when:fd(x.d),where:loc(x)}));const cg=CCG.find(c=>c.a===g||c.b===g);if(cg)L.push({o:cg.a===g?cg.b:cg.a,w:cg.win===g,f:false,txt:`Title game ${cg.win===g?'W':'L'}`,when:'Title game',where:'vs'});return L}
 function cmpHTML(a,b,seed){if(!a||!b||a===b)return '<div class="panel" style="color:var(--mute)">Choose two different teams.</div>';if(CUR[a].rank>CUR[b].rank)[a,b]=[b,a];
   const A=CUR[a],B=CUR[b],ta=PT[a],tb=PT[b],na=esc(sn(a)),nb=esc(sn(b)),ga=gamesOf(a),gb=gamesOf(b),comp=Math.abs(A.adj-B.adj)<=(RMODE==='wb'?PC.h2h:BAND);
   const h2=ga.filter(x=>x.o===b),aw=h2.filter(x=>x.w).length,bwn=h2.length-aw,cm=[...new Set(ga.map(x=>x.o))].filter(o=>o!==b&&gb.some(x=>x.o===o));
@@ -649,7 +734,7 @@ function cmpHTML(a,b,seed){if(!a||!b||a===b)return '<div class="panel" style="co
 function renderPP(){const S=CUR=compute(),{all,field,why,out}=selectField(S),rk=g=>S[g].rank,seed=g=>field.indexOf(g)+1,rec=g=>S[g].w+'–'+S[g].l;
   if(!DEF)DEF={field:field.slice()};
   // title games
-  $('#ccg').innerHTML=CCG.map((c,i)=>{const pk=(g,pts)=>`<button class="pk ${c.win===g?'on':''}" data-cc="${i}" data-w="${esc(g)}" aria-pressed="${c.win===g}"><span class="rd"></span>${chip(g,28)}<span>${esc(sn(g))}<small>${PT[g].fw}–${PT[g].fl} · ${PT[g].fcw}–${PT[g].fcl} conf.${c.fav===g?' · model favorite':''}</small></span><span class="ps">${pts.toFixed(1)}</span></button>`;
+  $('#ccg').innerHTML=CCG.map((c,i)=>{const pk=(g,pts)=>`<button class="pk ${c.win===g?'on':''}" data-cc="${i}" data-w="${esc(g)}" aria-pressed="${c.win===g}"><span class="rd"></span>${chip(g,28)}<span>${esc(sn(g))}<small>${S[g].rw}–${S[g].rl} · ${BASE[g].cw}–${BASE[g].cl} conf.${c.fav===g?' · model favorite':''}</small></span><span class="ps">${pts.toFixed(1)}</span></button>`;
    return `<div class="cg ${c.win!==c.fav?'chg':''}"><div class="hd">${cfs(c.conf)}<small>${c.home?'at '+esc(sn(c.home)):'neutral site'}</small></div>${pk(c.a,c.p.pa)}${pk(c.b,c.p.pb)}<div class="ln"><span>Spread <b>${c.p.spread}</b></span><span>Total <b>${c.p.total}</b></span></div>${c.tie?'<div class="nt">Second place is a projected tie on conference record; the team with the better strength of record is used here.</div>':''}</div>`}).join('');
   const ch=CCG.filter(c=>c.win!==c.fav),inn=field.filter(g=>!DEF.field.includes(g)),outt=DEF.field.filter(g=>!field.includes(g));
   $('#ccnote').textContent=ch.length?`${ch.length} upset${ch.length>1?'s':''} selected (${ch.map(c=>sn(c.win)).join(', ')}).${inn.length?' Into the field: '+inn.map(sn).join(', ')+'. Out: '+outt.map(sn).join(', ')+'.':' The twelve teams are unchanged, though seeds may move.'}`:'Showing the model favorite in every title game.';
@@ -669,30 +754,77 @@ function renderPP(){const S=CUR=compute(),{all,field,why,out}=selectField(S),rk=
   const rows=psAll?all:all.slice(0,25);
   $('#psor').innerHTML=`<thead><tr><th>#</th><th>Team</th><th>Conference</th><th class="n">Now</th><th class="n">Projected</th><th class="n">Proj. SOR</th><th class="n">Current SOR rank</th><th class="n">Change</th><th class="n">Power rank</th><th class="n">SOS rank</th></tr></thead><tbody>`+rows.map(g=>{const t=PT[g],d=t.sor.rank-rk(g);return `<tr class="clk" tabindex="0" data-sor="${esc(g)}"><td class="rk">${rk(g)}</td><td><div class="tm">${chip(g,30)}<div>${esc(t.short)}${field.includes(g)?` <small style="display:inline;color:var(--green)">· seed ${seed(g)}</small>`:''}</div></div></td><td>${cfs(t.conf)}</td><td class="n">${t.w}–${t.l}</td><td class="n">${rec(g)}</td><td class="n ${cls(S[g].adj)}">${s2(S[g].adj)}</td><td class="n">${t.sor.rank}</td><td class="n ${cls(d)}">${d>0?'▲ '+d:d<0?'▼ '+Math.abs(d):'–'}</td><td class="n">${t.sor.prRank}</td><td class="n">${t.sor.sosRank}</td></tr>`}).join('')+`</tbody>`;
   $('#psmore').textContent=psAll?'Show top 25':'Show all 138 teams';
-  const groups=[];PP.ST.forEach(s=>{const k=s.conf+(s.div?' · '+s.div:'');let gr=groups.find(x=>x.k===k);if(!gr)groups.push(gr={k,conf:s.conf,rows:[]});gr.rows.push(s)});
-  const ordc=[...P4,...G6,'FBS Independents'];groups.sort((a,b)=>ordc.indexOf(a.conf)-ordc.indexOf(b.conf));
-  $('#confs').innerHTML=groups.map(gr=>`<div class="tw"><div class="cft">${esc(cfs(gr.k))}<small>${gr.rows.length} teams</small></div><table class="rank sm"><thead><tr><th>#</th><th>Team</th><th class="n">Now</th><th class="n">Proj.</th><th class="n">Conf.</th></tr></thead><tbody>${gr.rows.slice().sort((a,b)=>a.fin-b.fin||PT[a.gd].psor.rank-PT[b.gd].psor.rank).map(s=>`<tr class="clk" tabindex="0" data-sor="${esc(s.gd)}"><td class="rk">${s.fin??"–"}</td><td><div class="tm">${chip(s.gd,24)}<div>${esc(sn(s.gd))}${field.includes(s.gd)?` <small style="display:inline;color:var(--green)">· seed ${seed(s.gd)}</small>`:''}</div></div></td><td class="n">${s.cur}</td><td class="n"><b>${s.proj}</b></td><td class="n">${gr.conf==='FBS Independents'?'–':s.pc}</td></tr>`).join('')}</tbody></table></div>`).join('');
+  const groups=[];TK.forEach(g=>{const k=PT[g].conf+(PT[g].div?' · '+PT[g].div:'');let gr=groups.find(x=>x.k===k);if(!gr)groups.push(gr={k,conf:PT[g].conf,rows:[]});gr.rows.push(g)});
+  const ordc=[...P4,...G6,'FBS Independents'];groups.sort((a,b)=>ordc.indexOf(a.conf)-ordc.indexOf(b.conf)||a.k.localeCompare(b.k));
+  $('#confs').innerHTML=groups.map(gr=>{const ind=gr.conf==='FBS Independents';return `<div class="tw"><div class="cft">${esc(cfs(gr.k))}<small>${gr.rows.length} teams</small></div><table class="rank sm"><thead><tr><th>#</th><th>Team</th><th class="n">Now</th><th class="n">Proj.</th><th class="n">Conf.</th></tr></thead><tbody>${gr.rows.slice().sort((a,b)=>ind?rk(a)-rk(b):BASE[a].fin-BASE[b].fin||rk(a)-rk(b)).map(g=>`<tr class="clk" tabindex="0" data-sor="${esc(g)}"><td class="rk">${BASE[g].fin??"–"}</td><td><div class="tm">${chip(g,24)}<div>${esc(sn(g))}${field.includes(g)?` <small style="display:inline;color:var(--green)">· seed ${seed(g)}</small>`:''}</div></div></td><td class="n">${PT[g].w}–${PT[g].l}</td><td class="n"><b>${S[g].rw}–${S[g].rl}</b></td><td class="n">${ind?'–':BASE[g].cw+'–'+BASE[g].cl}</td></tr>`).join('')}</tbody></table></div>`}).join('');
+  $('#hfield').innerHTML=field.slice(0,4).map((g,i)=>`<div class="frow" data-sor="${esc(g)}"><div class="seedb">${i+1}</div><div><b>${esc(sn(g))}</b><small>${esc(why[g])} · bye</small></div><span>${rec(g)}</span></div>`).join('')+`<div style="padding:12px 0 0;border-top:1px solid var(--line);font-size:13.5px;color:var(--mute)">Seeds 5–12: ${field.slice(4).map(sn).join(', ')}. First team out: <b style="color:var(--ink)">${esc(sn(out[0]))}</b></div>`;
+  // hypothetical 24-team format
+  {const w24={},champs=CCG.filter(c=>F24.conf[c.conf]).map(c=>[c.win,cfs(c.conf)+' champion']);champs.forEach(([g,l])=>w24[g]=l);
+   const g6c=CCG.filter(c=>G6.includes(c.conf)).map(c=>c.win).sort((a,b)=>rk(a)-rk(b));
+   if(F24.g6==='team'){const g=all.find(x=>G6.includes(PT[x].conf));if(g&&!w24[g])w24[g]='Top Group of Six team'}
+   else if(F24.g6==='champ'){const g=g6c.find(x=>!w24[x])&&!g6c.some(x=>w24[x])?g6c[0]:null;if(g)w24[g]='Top Group of Six champion ('+cfs(PT[g].conf)+')'}
+   const nd=TK.find(g=>PT[g].name.startsWith('Notre Dame'));if(nd&&F24.nd>0&&rk(nd)<=F24.nd&&!w24[nd])w24[nd]='Notre Dame, top '+F24.nd;
+   const autos=Object.keys(w24).length,f24=Object.keys(w24);for(const g of all){if(f24.length>=24)break;if(!f24.includes(g)){f24.push(g);w24[g]='At-large'}}
+   f24.sort((a,b)=>rk(a)-rk(b));const s24=g=>f24.indexOf(g)+1,out24=all.filter(g=>!f24.includes(g)).slice(0,4),below=f24.filter(g=>rk(g)>24),added=f24.filter(g=>!field.includes(g));
+   $('#f24lede').textContent=`${autos} automatic bid${autos===1?'':'s'} and ${24-autos} at-large spots.${below.length?` ${below.map(g=>sn(g)+' (No. '+rk(g)+')').join(', ')} get${below.length===1?'s':''} in from outside the top 24 on an automatic bid.`:' Every team in the field is ranked in the top 24.'} Last team in: ${sn(f24.filter(g=>w24[g]==='At-large').pop())}. First four out: ${out24.map(g=>sn(g)+' (No. '+rk(g)+')').join(', ')}. ${added.length} teams are in this field that miss the 12-team version.`;
+   $('#f24').innerHTML=`<thead><tr><th>Seed</th><th>Team</th><th>Conference</th><th class="n">Rank</th><th class="n">Projected</th><th class="n">Proj. SOR</th><th>How they got in</th><th>First game</th></tr></thead><tbody>`+f24.map(g=>{const t=PT[g],s=s24(g);return `<tr class="clk" tabindex="0" data-sor="${esc(g)}"><td class="rk"><b style="color:var(--ink)">${s}</b></td><td><div class="tm">${chip(g,30)}<div>${esc(t.short)}${field.includes(g)?'':' <small style="display:inline;color:var(--gold)">· new</small>'}</div></div></td><td>${cfs(t.conf)}</td><td class="n">${rk(g)}</td><td class="n">${rec(g)}</td><td class="n ${cls(S[g].adj)}">${s2(S[g].adj)}</td><td><span class="bid ${w24[g]==='At-large'?'':'aq'}">${esc(w24[g])}</span></td><td style="color:var(--mute)">${s<=8?'Bye, then hosts round 2':s<=16?'Hosts No. '+(33-s)+' '+esc(sn(f24[32-s])):'At No. '+(33-s)+' '+esc(sn(f24[32-s]))}</td></tr>`}).join('')+`</tbody>`;
+   const g24=(id,lbl,a,b,home,pa,pb)=>{const full=a&&b,p=full?gproj(a,b,home):null,fav=full?(p.pa===p.pb?(s24(a)<s24(b)?a:b):p.fav):null,w=full&&(BK24[id]===a||BK24[id]===b)?BK24[id]:null;
+    const tm=(g,ph)=>!g?`<div class="sd tbd">${ph}</div>`:full?`<button class="sd ${w===g?'on':w?'lose':''}" data-bk24="${id}" data-w="${esc(g)}" aria-pressed="${w===g}"><i>${s24(g)}</i>${chip(g,22)}<span>${esc(sn(g))}${fav===g?'<em>fav</em>':''}</span><span class="rd"></span></button>`:`<div class="sd" style="cursor:default"><i>${s24(g)}</i>${chip(g,22)}<span>${esc(sn(g))}</span></div>`;
+    return {w,full,html:`<div class="gm"><div class="lbl">${lbl}</div>${tm(a,pa)}${tm(b,pb)}<div class="ln">${full?`<b>${p.spread}</b> · Total <b>${p.total}</b>`:'Set once both teams are known'}</div></div>`}};
+   const T=n=>f24[n-1],o1=[16,9,13,12,15,10,14,11],o2=[1,8,4,5,2,7,3,6],r1=o1.map((h,i)=>game24('a'+i,h)),W='winner';
+   function game24(id,h){return g24(id,'At '+esc(sn(T(h))),T(h),T(33-h),T(h))}
+   const r2=o2.map((s,i)=>g24('b'+i,'At '+esc(sn(T(s))),T(s),r1[i].w,T(s),'',`Winner of ${o1[i]} vs ${33-o1[i]}`)),r3=[0,1,2,3].map(i=>g24('c'+i,'Quarterfinal',r2[2*i].w,r2[2*i+1].w,null,'Round 2 '+W,'Round 2 '+W)),r4=[0,1].map(i=>g24('d'+i,'Semifinal',r3[2*i].w,r3[2*i+1].w,null,'Quarterfinal '+W,'Quarterfinal '+W)),r5=g24('e','National championship',r4[0].w,r4[1].w,null,'Semifinal '+W,'Semifinal '+W);
+   $('#b24').innerHTML=`<div><h3>First round</h3>${r1.map(x=>x.html).join('')}</div><div><h3>Second round</h3>${r2.map(x=>x.html).join('')}</div><div><h3>Quarterfinals</h3>${r3.map(x=>x.html).join('')}</div><div><h3>Semifinals</h3>${r4.map(x=>x.html).join('')}</div><div><h3>Championship</h3>${r5.html}<div class="panel" style="padding:12px 14px;font-size:13px;color:var(--mute)">Champion<div style="font-weight:600;font-size:18px;color:${r5.w?'var(--ink)':'var(--mute)'};margin-top:4px">${r5.w?esc(sn(r5.w)):'Not picked yet'}</div></div></div>`;
+   const g2=[...r1,...r2,...r3,...r4,r5],n2=g2.filter(x=>x.w).length;$('#bk24note').textContent=n2===0?'Select a winner in each first-round game to fill in the second round.':n2<g2.length?`${n2} of ${g2.length} games picked. ${g2.filter(x=>x.full&&!x.w).length} ready for a pick.`:`All ${g2.length} games picked. ${sn(r5.w)} is your champion.`;
+   LAST24={f24,w24,autos}}
+  // remaining regular-season games
+  {const q=RGQ.trim().toLowerCase(),nov=Object.keys(OV).length,top=new Set(all.slice(0,25)),inF=x=>RGS==='all'||(RGS==='chg'?OV[x.i]:top.has(x.a)||top.has(x.h));
+   const gs=PG.filter(x=>x.s!=='F'&&inF(x)&&(RGC==='all'||(PT[x.a]&&PT[x.a].conf===RGC)||(PT[x.h]&&PT[x.h].conf===RGC))&&(!q||(sn(x.a)+' '+sn(x.h)+' '+x.a+' '+x.h).toLowerCase().includes(q)));
+   const days={};gs.forEach(x=>(days[x.d]=days[x.d]||[]).push(x));
+   const card=x=>{const def=defWin(x),w=winnerOf(x),rated=x.s==='P',m=rated?half(Math.abs(x.ap-x.hp)):0,tm=g=>PT[g]?`<button class="sd ${w===g?'on':'lose'}" data-rg="${x.i}" data-w="${esc(g)}" aria-pressed="${w===g}"><i>${rk(g)<=25?rk(g):''}</i>${chip(g,22)}<span>${esc(sn(g))}${def===g?'<em>fav</em>':''}</span><span class="rd"></span></button>`:`<div class="sd lose" style="cursor:default"><i></i><span>${esc(g)} <em>FCS</em></span></div>`;
+    return `<div class="gm ${OV[x.i]?'chg':''}"><div class="lbl">${x.c?'Conference game':'Non-conference'} · at ${esc(sn(x.h))}</div>${tm(x.a)}${tm(x.h)}<div class="ln">${rated?`<b>${m===0?'Pick’em':esc(sn(x.ap>x.hp?x.a:x.h))+' −'+m.toFixed(1)}</b> · Total <b>${half(x.ap+x.hp).toFixed(1)}</b>`:'No projection: FCS opponent'}</div></div>`};
+   $('#rgl').innerHTML=Object.keys(days).sort().map(d=>`<div class="day">${new Date(d+'T12:00:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'})}<small>${days[d].length} game${days[d].length>1?'s':''}</small></div><div class="rgg">${days[d].map(card).join('')}</div>`).join('')||'<div class="empty">No games match.</div>';
+   $('#rgnote').textContent=(nov?`${nov} result${nov>1?'s':''} changed from the model. `:'Every remaining game is set to the model favorite. ')+`Showing ${gs.length} of ${PG.filter(x=>x.s!=='F').length} remaining games.`}
   return {S,field,out,champ:fn.w}}
-document.addEventListener('click',e=>{const c=e.target.closest&&e.target.closest('[data-cc],[data-bk]');if(!c)return;if(c.dataset.bk)BK[c.dataset.bk]=c.dataset.w;else CCG[+c.dataset.cc].win=c.dataset.w;renderPP()});
+document.addEventListener('click',e=>{const c=e.target.closest&&e.target.closest('[data-cc],[data-bk]');if(!c)return;if(c.dataset.bk)BK[c.dataset.bk]=c.dataset.w;else CCP[CCG[+c.dataset.cc].conf]=c.dataset.w;renderPP()});
 const setW=e=>{const v=parseFloat(e.target.value);if(isNaN(v))return;CCW=Math.min(100,Math.max(0,v))/100;if(e.type==='change')e.target.value=Math.round(CCW*100);renderPP()};$('#ccwt').oninput=setW;$('#ccwt').onchange=setW;
 document.addEventListener('click',e=>{const c=e.target.closest&&e.target.closest('[data-pt]');if(!c)return;const p=c.dataset.pt;document.querySelectorAll('.psec').forEach(s=>s.hidden=s.dataset.ps!==p);document.querySelectorAll('#ptabs .tab').forEach(b=>b.setAttribute('aria-pressed',b.dataset.pt===p));const tb=$('#ptabs');if(c.closest('.nx')&&tb.scrollIntoView)tb.scrollIntoView({block:'start'})});$('#bkreset').onclick=()=>{BK={};renderPP()};
 document.addEventListener('click',e=>{const c=e.target.closest&&e.target.closest('[data-cmp]');if(!c)return;const g=c.dataset.cmp;if(!CMP.includes(g))CMP=[CMP[1],g];renderPP();const an=$('#cmpanchor');if(an.scrollIntoView)an.scrollIntoView({block:'start',behavior:'smooth'})});
 $('#cmpa').onchange=e=>{CMP[0]=e.target.value;renderPP()};$('#cmpb').onchange=e=>{CMP[1]=e.target.value;renderPP()};
 const numSet=(id,fn)=>{const h=e=>{const v=parseFloat(e.target.value);if(isNaN(v)||v<0)return;fn(v);renderPP()};$(id).oninput=h;$(id).onchange=h};numSet('#band',v=>BAND=v);numSet('#cov',v=>COV=v);numSet('#cocap',v=>COCAP=v);
 $('#rmode').onchange=e=>{RMODE=e.target.value;document.querySelectorAll('.cmset').forEach(l=>l.classList.toggle('off',RMODE==='wb'));['#band','#cov','#cocap'].forEach(i=>$(i).disabled=RMODE==='wb');renderPP()};
-$('#ccreset').onclick=()=>{CCG.forEach(c=>c.win=c.fav);renderPP()};$('#g6rule').onchange=e=>{g6rule=e.target.value;renderPP()};$('#psmore').onclick=()=>{psAll=!psAll;renderPP()};
-$('#rules').innerHTML=['<b>Twelve teams.</b> The champions of the ACC, Big Ten, Big 12 and SEC get automatic bids whatever their ranking.','<b>One Group of Six bid.</b> It goes to the highest-ranked team from the American, Conference USA, MAC, Mountain West, Pac-12 or Sun Belt. Published descriptions differ on whether that team must be a conference champion, so the Group of Six setting above lets you apply either reading.','<b>Notre Dame</b> gets a bid if it finishes in the top 12.','<b>At-large spots</b> go to the next highest-ranked teams until the field has twelve.','<b>Straight seeding.</b> Teams are seeded in ranking order, seeds 1–4 get byes, and an automatic qualifier from outside the top 12 goes to the bottom of the bracket.','<b>What this page assumes.</b> The projected strength-of-record ranking stands in for the selection committee’s ranking, which is a judgement and will differ. Each conference champion is the winner selected in its title game above. A title game counts at the selected weight in strength of record, and the low-loss floor is judged on the regular-season record. Title-game pairings use projected conference records, not each league’s full tiebreaker rules.','<b>Projected lines.</b> Spreads and totals come from the same points regression as the 51+ page, using each team’s offense and defense ratings and the two teams’ average pace, with home field only where a team hosts. They are rounded to the half point and are not market lines.'].map(s=>`<li>${s}</li>`).join('');
-$('#sorhow').innerHTML=[`<b>Rate every team.</b> A power rating is a team’s average scoring margin, with each game capped at ${PC.cap} points, plus the average rating of its opponents. That is repeated six times so the ratings settle. FCS opponents are fixed at ${sg(PC.fcs)}.`,`<b>Set the benchmark.</b> The 25th-best rating in FBS (currently ${sg(PC.bench)}) represents a Top-25-calibre team.`,`<b>Ask what the benchmark would do.</b> For each game on a team’s schedule, work out the chance the benchmark team would win it, from the gap between its rating and the opponent’s, using a ${PC.sd.toFixed(1)}-point spread of outcomes. Add those up to get expected wins.`,`<b>Subtract.</b> Strength of record is actual wins minus the benchmark’s expected wins. Positive means the team has done more with its schedule than a Top-25 team would be expected to.`,`<b>Project the finish.</b> Remaining games are added with the model’s favorite winning each one, then each conference championship game as selected above at a reduced weight (half a game unless changed), with ratings held at today’s values.`,`<b>Low-loss floor.</b> A power-conference team (or Notre Dame) projected to finish the regular season with ${PC.floorL} loss or fewer cannot fall below ${PC.floor.toFixed(2)}.`,`<b>Tiebreakers among comparable teams.</b> Two teams are comparable when their numbers are within the band set in the settings bar. Common opponents come first as a nudge: a team gains the set value for each net game it did better against shared opponents (at least two are needed), split between the pair and capped per team. Head-to-head is then decisive: the winner is ranked directly ahead, unless the teams split, the results form a circle, or it would lift the winner more than the band above its own number. The “As in the workbook” setting instead applies head-to-head only to teams with identical records within ${PC.h2h}, and no common-opponent credit.`].map(s=>`<li>${s}</li>`).join('');
-$('#crit4').innerHTML=['<b>Strength of schedule: partly covered.</b> Strength of record already rewards a hard schedule, because each win is measured against what a Top-25 team would do with the same opponents. Schedule strength is not used as a separate tiebreaker.','<b>Head-to-head: covered.</b> Among comparable teams the head-to-head winner is ranked ahead, whatever the records. Projected results count as well as played ones.','<b>Common opponents: covered as a nudge.</b> Win–loss results against shared opponents adjust the ranking value by a set amount, with no use of margin. The size of the band, the value per game and the cap are judgement calls, editable in the settings bar.','<b>Player and coach availability: not covered.</b> The data has no injury or availability information.','<b>Margin of victory.</b> Strength of record counts wins only. Margin enters indirectly through the power ratings used for opponents, capped at ' + PC.cap + ' points a game.'].map(s=>`<li>${s}</li>`).join('');
+document.addEventListener('click',e=>{const c=e.target.closest&&e.target.closest('[data-rg]');if(!c)return;const x=PG[+c.dataset.rg],w=c.dataset.w;if(w===defWin(x))delete OV[x.i];else OV[x.i]=w;renderPP()});
+const ab24=()=>{$('#ab24').innerHTML=[...P4,...G6].map(c=>`<label><input type="checkbox" data-ab="${c}" ${F24.conf[c]?'checked':''}>${cfs(c)}</label>`).join('');$('#g624').value=F24.g6;$('#nd24').value=F24.nd};ab24();
+document.addEventListener('change',e=>{const c=e.target&&e.target.dataset&&e.target.dataset.ab;if(!c)return;F24.conf[c]=e.target.checked;renderPP()});
+document.addEventListener('click',e=>{const c=e.target.closest&&e.target.closest('[data-bk24]');if(!c)return;BK24[c.dataset.bk24]=c.dataset.w;renderPP()});
+$('#g624').onchange=e=>{F24.g6=e.target.value;renderPP()};{const h=e=>{const v=parseInt(e.target.value,10);F24.nd=isNaN(v)?0:Math.max(0,Math.min(24,v));renderPP()};$('#nd24').oninput=h;$('#nd24').onchange=h}
+$('#ab24reset').onclick=()=>{F24=F24D();ab24();renderPP()};$('#bk24reset').onclick=()=>{BK24={};renderPP()};
+$('#rgreset').onclick=()=>{OV={};renderPP()};$('#rgs').onchange=e=>{RGS=e.target.value;renderPP()};$('#rgc').onchange=e=>{RGC=e.target.value;renderPP()};$('#rgq').oninput=e=>{RGQ=e.target.value;renderPP()};
+$('#rgc').innerHTML='<option value="all">All conferences</option>'+[...P4,...G6,'FBS Independents'].map(c=>`<option value="${c}">${cfs(c)}</option>`).join('');
+$('#ccreset').onclick=()=>{CCP={};renderPP()};$('#g6rule').onchange=e=>{g6rule=e.target.value;renderPP()};$('#psmore').onclick=()=>{psAll=!psAll;renderPP()};
+$('#rules').innerHTML=['<b>Twelve teams.</b> The champions of the ACC, Big Ten, Big 12 and SEC get automatic bids whatever their ranking.','<b>One Group of Six bid.</b> It goes to the highest-ranked team from the American, Conference USA, MAC, Mountain West, Pac-12 or Sun Belt. Published descriptions differ on whether that team must be a conference champion, so the Group of Six setting on the Settings tab lets you apply either reading.','<b>Notre Dame</b> gets a bid if it finishes in the top 12.','<b>At-large spots</b> go to the next highest-ranked teams until the field has twelve.','<b>Straight seeding.</b> Teams are seeded in ranking order, seeds 1–4 get byes, and an automatic qualifier from outside the top 12 goes to the bottom of the bracket.','<b>What this page assumes.</b> The projected strength-of-record ranking stands in for the selection committee’s ranking, which is a judgement and will differ. Each conference champion is the winner selected in its title game above. A title game counts at the selected weight in strength of record, and the low-loss floor is judged on the regular-season record. Title-game pairings use projected conference records, not each league’s full tiebreaker rules.','<b>Projected lines.</b> Spreads and totals come from the same points regression as the 51+ page, using each team’s offense and defense ratings and the two teams’ average pace, with home field only where a team hosts. They are rounded to the half point and are not market lines.'].map(s=>`<li>${s}</li>`).join('');
+$('#sorhow').innerHTML=[`<b>Rate every team.</b> A power rating is a team’s average scoring margin, with each game capped at ${PC.cap} points, plus the average rating of its opponents. That is repeated six times so the ratings settle. FCS opponents are fixed at ${sg(PC.fcs)}.`,`<b>Set the benchmark.</b> The 25th-best rating in FBS (currently ${sg(PC.bench)}) represents a Top-25-calibre team.`,`<b>Ask what the benchmark would do.</b> For each game on a team’s schedule, work out the chance the benchmark team would win it, from the gap between its rating and the opponent’s, using a ${PC.sd.toFixed(1)}-point spread of outcomes. Add those up to get expected wins.`,`<b>Subtract.</b> Strength of record is actual wins minus the benchmark’s expected wins. Positive means the team has done more with its schedule than a Top-25 team would be expected to.`,`<b>Project the finish.</b> Remaining games are added with the model’s favorite winning each one unless you change a result, then each conference championship game as selected above at a reduced weight (half a game unless changed), with ratings held at today’s values.`,`<b>Low-loss floor.</b> A power-conference team (or Notre Dame) projected to finish the regular season with ${PC.floorL} loss or fewer cannot fall below ${PC.floor.toFixed(2)}.`,`<b>Tiebreakers among comparable teams.</b> Two teams are comparable when their numbers are within the band set on the Settings tab. Common opponents come first as a nudge: a team gains the set value for each net game it did better against shared opponents (at least two are needed), split between the pair and capped per team. Head-to-head is then decisive: the winner is ranked directly ahead, unless the teams split, the results form a circle, or it would lift the winner more than the band above its own number. The “As in the workbook” setting instead applies head-to-head only to teams with identical records within ${PC.h2h}, and no common-opponent credit.`].map(s=>`<li>${s}</li>`).join('');
+$('#crit4').innerHTML=['<b>Strength of schedule: partly covered.</b> Strength of record already rewards a hard schedule, because each win is measured against what a Top-25 team would do with the same opponents. Schedule strength is not used as a separate tiebreaker.','<b>Head-to-head: covered.</b> Among comparable teams the head-to-head winner is ranked ahead, whatever the records. Projected results count as well as played ones.','<b>Common opponents: covered as a nudge.</b> Win–loss results against shared opponents adjust the ranking value by a set amount, with no use of margin. The size of the band, the value per game and the cap are judgement calls, editable on the Settings tab.','<b>Player and coach availability: not covered.</b> The data has no injury or availability information.','<b>Margin of victory.</b> Strength of record counts wins only. Margin enters indirectly through the power ratings used for opponents, capped at ' + PC.cap + ' points a game.'].map(s=>`<li>${s}</li>`).join('');
 // baseline check hook: with no title games the ranking should equal the workbook's
-const __base=(()=>{const keep=CCG.splice(0);RMODE='wb';const S=compute();RMODE='cm';CCG.push(...keep);return TK.filter(g=>S[g].rank!==PT[g].psor.rank||Math.abs(S[g].adj-PT[g].psor.adj)>0.002).length})();
+const __base=(()=>{NOCCG=true;RMODE='wb';const S=compute();RMODE='cm';NOCCG=false;return TK.filter(g=>S[g].rank!==PT[g].psor.rank||Math.abs(S[g].adj-PT[g].psor.adj)>0.002).length})();
 const __pp=renderPP();
-globalThis.__dbg={S2G,d51,dsor,eFor,eGame,d51e,PG,drawProf,openProfile,__base,__pp,CCG,renderPP,PT,cmp:(a,b)=>cmpHTML(a,b,()=>0),cur:()=>CUR,mode:m=>{RMODE=m},setW:v=>{CCW=v},pick:(id,w)=>{BK[id]=w}};
+globalThis.__dbg={names:()=>TK.map(g=>[PT[g].name,sn(g),slug(sn(g))+'.png',abbr(sn(g))]),cands:()=>A2S,f24:()=>LAST24,set24:f=>{f(F24)},pick24:(id,w)=>{BK24[id]=w},ov:(i,w)=>{OV[i]=w},clr:()=>{OV={};CCP={}},base:()=>BASE,ccp:(c,w)=>{CCP[c]=w},defWin,S2G,d51,dsor,eFor,eGame,d51e,PG,drawProf,openProfile,__base,__pp,CCG,renderPP,PT,cmp:(a,b)=>cmpHTML(a,b,()=>0),cur:()=>CUR,mode:m=>{RMODE=m},setW:v=>{CCW=v},pick:(id,w)=>{BK[id]=w}};
 
 // ---- routing ----
-function route(){const h=location.hash.replace('#',''),r=['model-picks','fifty-one','games-to-watch','playoff-picture'].includes(h)?h:'the-board';
-  document.querySelectorAll('main').forEach(m=>m.hidden=m.id!=='v-'+r);
-  document.querySelectorAll('.nav a').forEach(a=>a.classList.toggle('on',a.dataset.r===r));window.scrollTo(0,0)}
+// ---- optional team images: logos/<file>.png in the same folder as this page; the chip stays if a file is missing ----
+const slug=n=>n.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''),A2S={},LGX=new Set(),LGOK={};
+const FIGN={"Arkansas State":"Arkansas State Red Wolves","California":"Cal","Cincinnati":"Cincinatti Bearcats","Colorado":"Colorado Buffaloes","Delaware":"Delaware Fighting Hens","East Carolina":"ECU","Florida":"Florida Gators","Florida Atlantic":"FAU","Florida International":"FIU","Hawai'i":"Hawaii","Iowa State":"Iowas State ","Jacksonville State":"JSU","James Madison":"JMU","Kentucky":"Kentucky UK","Louisiana":"Louisiana Ragin Cajuns","Louisiana Tech":"LA Tech","Louisville":"Lousville","Massachusetts":"UMASS","Miami":"Miami Florida","Miami (OH)":"Miami Ohio","Minnesota":"Minnesota ","Mississippi State":"Mississippi","Missouri State":"Missouri State Bears","North Dakota State":"North Dakota State University NDSU","North Texas":"Northern Texas","Northern Illinois":"NIU","Northwestern":"North Western","Ohio":"Ohio Bobcats","Ohio State":"Ohio State Dark Background","Pittsburgh":"Pitt","Sacramento State":"Sacramento State Hornets","San Diego State":"San Diego","San José State":"San Jose State","South Florida":"USF","Temple":"Temple ","UConn":"UCONN","UL Monroe":"Louisiana Monroe","Western Kentucky":"Western Kentucky Hilltopers"};
+TK.forEach(g=>{const s=sn(g),f=FIGN[s]||s;A2S[abbr(s)]=[...new Set([slug(s)+'.png',f+'.png',f.trim()+'.png',s+'.png'])]});
+try{const pass=()=>document.querySelectorAll('.chip:not([data-lg])').forEach(c=>{c.dataset.lg='1';const k=c.textContent.trim(),L=A2S[k];if(!L||LGX.has(k))return;const hit=LGOK[k],im=new Image();let i=0;im.alt='';im.onload=()=>{LGOK[k]=im.src;c.classList.add('haslogo');c.appendChild(im)};im.onerror=()=>{if(hit||++i>=L.length)LGX.add(k);else im.src='logos/'+encodeURIComponent(L[i])};im.src=hit||'logos/'+encodeURIComponent(L[0])});
+  new MutationObserver(pass).observe(document.body,{childList:true,subtree:true});pass()}catch(e){}
+// ---- home ----
+$('#hstats').innerHTML=[['Season record',rec(all),B.length+' bets through Week '+wks[wks.length-1],''],['Units won',u(all.pnl),'on '+all.stake.toFixed(1)+' staked','pos'],['Return',roi(all),'profit per unit staked','pos'],['Targeted this week',nPicks,'picks across '+tgt.length+' games','']].map(([k,v,s,c])=>`<div class="stat"><div class="k">${k}</div><div class="v ${c}">${v}</div><div class="s">${s}</div></div>`).join('');
+$('#hplays').innerHTML=`<thead><tr><th>Team</th><th class="n">Proj. pts</th><th class="n">Chance</th><th class="n">Fair odds</th></tr></thead><tbody>`+T.slice(0,5).map((t,i)=>`<tr class="clk" tabindex="0" data-t51="${i}" style="cursor:pointer"><td><b>${esc(t.team)}</b><div style="font-size:12.5px;color:var(--mute)">${t.ha==='H'?'vs':'at'} ${esc(t.opp)}</div></td><td class="n" style="color:var(--mute)">${t.proj.toFixed(1)}</td><td class="n"><b style="font:800 20px var(--head)">${p1(t.p)}</b></td><td class="n"><b class="pos">${am(t.odds)}</b></td></tr>`).join('')+`</tbody>`;
+$('#hgames').innerHTML=ghead+'<tbody>'+[...tgt].sort((a,b)=>b.maxEdge-a.maxEdge).slice(0,8).map(grow).join('')+'</tbody>';
+const ROUTES=['the-board','model-picks','fifty-one','games-to-watch','projected-playoff'];
+function show(r){document.querySelectorAll('main').forEach(m=>m.hidden=m.id!=='v-'+r);document.querySelectorAll('.nav a').forEach(a=>a.classList.toggle('on',a.dataset.r===r));try{window.scrollTo(0,0)}catch(e){}}
+function route(){let h='';try{h=location.hash.replace('#','')}catch(e){}show(ROUTES.includes(h)?h:'home')}
+document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('a[data-r]');if(!a)return;e.preventDefault();show(a.dataset.r);try{history.replaceState(null,'','#'+a.dataset.r)}catch(err){}});
 window.addEventListener('hashchange',route);route();
 })();
 </script>
