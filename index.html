@@ -234,7 +234,7 @@ th.srt{cursor:pointer;user-select:none;white-space:nowrap}th.srt:hover,th.srt:fo
   <section class="stats" id="stats"></section>
 </div>
 <section class="board"><div class="shell">
-  <div class="bhead"><h2>Week 11 Games</h2><p>Projected score from the model; Vegas line and total beside it. A pick is targeted when the model differs from Vegas by 5+ points on the spread, 7+ on the total, or 5+ on a team total. All times Eastern. Select a team for its profile.</p></div>
+  <div class="bhead"><h2>Week 11 Games</h2><p>Each card shows the model’s projected score, then its line and total next to Vegas’s. Cards outlined in green have a targeted pick, listed at the bottom of the card. A pick is targeted when the model differs from Vegas by 5+ points on the spread, 7+ on the total, or 5+ on a team total. All times Eastern. Select a team for its profile.</p></div>
   <div class="controls" id="controls"></div>
   <div id="list"></div>
 </div></section>
@@ -496,7 +496,7 @@ function render(){const s=q.trim().toLowerCase();
   if(!rows.length){$('#list').innerHTML='<div class="empty">No games match.</div>';return}
   const days={};rows.forEach(g=>(days[g.date]=days[g.date]||[]).push(g));
   $('#list').innerHTML=Object.keys(days).sort().map(d=>{const dt=new Date(d+'T12:00:00');
-    return `<div class="day">${dt.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'})}<small>${days[d].length} game${days[d].length>1?'s':''}</small></div><div class="tw"><table class="rank sm" style="min-width:1000px">${ghead}<tbody>${days[d].map(grow).join('')}</tbody></table></div>`}).join('')}
+    return `<div class="day">${dt.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'})}<small>${days[d].length} game${days[d].length>1?'s':''}</small></div><div class="grid">${days[d].map(card).join('')}</div>`}).join('')}
 const ghead='<thead><tr><th>Game</th><th class="n">Proj. score</th><th>Model line</th><th>Vegas line</th><th class="n">Model total</th><th class="n">Vegas total</th><th class="n">51+ chance</th><th>Targeted picks</th></tr></thead>';
 function grow(g){const vline=g.line===0?'Pick’em':`${esc(g.fav)} −${Math.abs(g.line).toFixed(1)}`,ml=Math.abs(g.mHomeSpread)<0.25?'Even':`${esc(g.mHomeSpread<0?g.home:g.away)} −${Math.abs(g.mHomeSpread).toFixed(1)}`;
   return `<tr><td><span class="tclk inl" tabindex="0" data-prof="${esc(g.away)}">${esc(g.away)}</span> <span style="color:var(--mute)">at</span> <span class="tclk inl" tabindex="0" data-prof="${esc(g.home)}">${esc(g.home)}</span><div style="font-size:12px;color:var(--mute);margin-top:2px">${gwhen(g)}${g.venue?' · '+esc(g.venue):''}</div></td><td class="n" style="white-space:nowrap"><b>${g.mAway.toFixed(1)} – ${g.mHome.toFixed(1)}</b></td><td style="white-space:nowrap"><b>${ml}</b></td><td style="white-space:nowrap;color:var(--mute)">${vline}</td><td class="n"><b>${g.mTotal.toFixed(1)}</b></td><td class="n" style="color:var(--mute)">${g.total.toFixed(1)}</td><td class="n" style="white-space:nowrap;color:var(--mute)">${pct(g.away51)} / ${pct(g.home51)}</td><td>${g.picks.length?g.picks.map(p=>`<span class="pill">${esc(p.p)}<small>${p.e.toFixed(1)} pt edge</small></span>`).join(''):'<span style="color:var(--mute);font-size:13px">No edge</span>'}</td></tr>`}
