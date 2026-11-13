@@ -39,4 +39,22 @@ module.exports = async (req, res) => {
     const now = Date.now(), games = [];
     for (const ev of await r.json()) {
       const t = Date.parse(ev.commence_time);
-      if (!(t > now)) continue;
+      if (!(t > now)) continue;                       // skip games in progress: those are in-play lines
+      const sp = [], tot = [];
+      for (const b of ev.bookmakers || []) for (const m of b.markets || []) {
+        if (m.key === 'spreads') { const o = (m.outcomes || []).find(o => o.name === ev.home_team); if (o && typeof o.point === 'number') sp.push(o.point); }
+        if (m.key === 'totals') { const o = (m.outcomes || []).find(o => o.name === 'Over'); if (o && typeof o.point === 'number') tot.push(o.point); }
+      }
+      if (!sp.length || !tot.length) continue;
+      games.push({
+        id: ev.id, h: ev.home_team, a: ev.away_team,
+        d: new Date(t).toLocaleDateString('en-CA', { timeZone: 'America/New_York' }),
+        sp: mode(sp), tot: mode(tot), n: sp.length
+      });
+    }
+    return reply({ ok: true, at: new Date(now).toISOString(), every: mins, n51: num(process.env.ODDS_51_GAMES, 10), games }, mins * 60);
+  } catch (e) {
+    console.log('odds api error', String(e));
+    return reply({ ok: false, why: 'error', games: [] }, 900);
+  }
+};
